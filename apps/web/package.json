@@ -12,6 +12,8 @@
     "test": "bun test"
   },
   "dependencies": {
+    "@sentry/astro": "^10.19.0",
+    "@spotlightjs/astro": "^3.2.6",
     "astro": "^5.14.4"
   },
   "devDependencies": {
