@@ -2,10 +2,8 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
   vite: {
-    build: {
-      rollupOptions: {
-        external: ["**/*.test.ts"],
-      },
+    optimizeDeps: {
+      exclude: ["**/*.test.ts"],
     },
   },
 });
