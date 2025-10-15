@@ -12,8 +12,8 @@
     "lint": "turbo run lint",
     "test": "turbo run test",
     "format": "turbo run format",
-    "check": "bunx ultracite@latest check",
-    "fix": "bunx ultracite@latest fix"
+    "check": "ultracite check",
+    "fix": "ultracite fix"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.5",

@@ -9,11 +9,28 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**", "build/**", ".astro/dist/**"]
     },
-    "lint": {},
-    "test": {},
-    "//#check": {},
-    "//#fix": {
-      "cache": false
+    "lint": {
+      "dependsOn": ["^lint"],
+      "outputs": []
+    },
+    "test": {
+      "dependsOn": ["^test"],
+      "outputs": []
+    },
+    "check": {
+      "dependsOn": ["^check"],
+      "cache": false,
+      "outputs": []
+    },
+    "fix": {
+      "dependsOn": ["^fix"],
+      "cache": false,
+      "outputs": []
+    },
+    "format": {
+      "dependsOn": ["^fix"],
+      "cache": false,
+      "outputs": []
     }
   }
 }

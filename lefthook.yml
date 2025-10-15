@@ -1,20 +1,18 @@
 # .lefthook.yml
 pre-commit:
-  # Ejecuta todos los comandos en paralelo para acelerar el commit
   parallel: true
   commands:
+    fmt:
+      run: bun run format
+      verbose: true
     lint:
       run: bun run lint
       verbose: true
     test:
       run: bun run test
       verbose: true
-    fmt:
-      run: bun run format
-      verbose: true
 
 pre-push:
-  # Antes de push, aseguramos que todo compile y pase tests
   parallel: false
   commands:
     build:
