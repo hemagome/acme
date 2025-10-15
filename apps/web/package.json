@@ -7,8 +7,8 @@
     "build": "bunx --bun astro build",
     "preview": "bunx --bun astro preview",
     "astro": "astro",
-    "lint": "bunx ultracite@latest check",
-    "format": "bunx ultracite@latest fix",
+    "lint": "ultracite check",
+    "format": "ultracite fix",
     "test": "bun test"
   },
   "dependencies": {
