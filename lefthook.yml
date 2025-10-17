@@ -9,7 +9,7 @@ pre-commit:
       run: bun run lint
       verbose: true
     test:
-      run: bun run test
+      run: bun run test:unit
       verbose: true
 
 pre-push:
@@ -19,5 +19,5 @@ pre-push:
       run: bun run build
       verbose: true
     test:
-      run: bun run test
+      run: bun run test:e2e
       verbose: true

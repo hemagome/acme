@@ -13,8 +13,16 @@
       "dependsOn": ["^lint"],
       "outputs": []
     },
+    "test:unit": {
+      "dependsOn": ["lint", "build"],
+      "outputs": []
+    },
+    "test:e2e": {
+      "dependsOn": ["test:unit", "build"],
+      "outputs": []
+    },
     "test": {
-      "dependsOn": ["^test"],
+      "dependsOn": ["test:unit", "test:e2e"],
       "outputs": []
     },
     "check": {

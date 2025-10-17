@@ -9,7 +9,9 @@
     "astro": "astro",
     "lint": "bunx --bun ultracite check",
     "format": "bunx --bun ultracite fix",
-    "test": "bun test"
+    "test:unit": "bun test tests/unit",
+    "test:e2e": "bunx --bun playwright test tests/e2e",
+    "test": "bun run test:unit && bun run test:e2e"
   },
   "dependencies": {
     "@sentry/astro": "^10.19.0",

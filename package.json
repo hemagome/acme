@@ -10,6 +10,8 @@
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
     "lint": "turbo run lint",
+    "test:unit": "turbo run test:unit",
+    "test:e2e": "turbo run test:e2e",
     "test": "turbo run test",
     "format": "turbo run format",
     "check": "ultracite check",
