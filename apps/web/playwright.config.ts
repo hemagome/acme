@@ -1,22 +1,22 @@
 import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
-  testDir: "./tests/e2e", // Carpeta donde estarán los tests
-  timeout: 30_000, // Timeout por test en ms
+  testDir: "./tests/e2e",
+  timeout: 30_000,
   expect: {
-    timeout: 5000, // Timeout de assertions
+    timeout: 5000,
   },
-  fullyParallel: true, // Ejecutar tests en paralelo
-  forbidOnly: !!process.env.CI, // Falla si hay tests marcados con .only en CI
+  fullyParallel: true,
+  forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 2 : undefined,
-  reporter: [["list"], ["html", { open: "never" }]], // List + HTML report
+  reporter: [["list"], ["html", { open: "never" }]],
   use: {
     headless: true,
     viewport: { width: 1280, height: 720 },
     actionTimeout: 5000,
-    baseURL: "http://localhost:3000", // Ajusta según tu dev server
-    trace: "on-first-retry", // Genera trace si falla test
+    baseURL: "http://localhost:4321",
+    trace: "on-first-retry",
     screenshot: "only-on-failure",
     video: "retain-on-failure",
   },
